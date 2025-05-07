@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Element Remover</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    .form-group {
+      margin-bottom: 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      background-color: #4285F4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #3367D6;
+    }
+    .selector-type {
+      margin-bottom: 10px;
+    }
+    .elements-list {
+      margin-top: 15px;
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    .element-item {
+      padding: 5px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+    }
+    .remove-btn {
+      color: red;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>元素移除器</h2>
+  
+  <div class="selector-type">
+    <label>
+      <input type="radio" name="selectorType" value="id" checked> 通过 ID
+    </label>
+    <label>
+      <input type="radio" name="selectorType" value="class"> 通过 ClassName
+    </label>
+  </div>
+  
+  <div class="form-group">
+    <label for="selectorValue">选择器值:</label>
+    <input type="text" id="selectorValue" placeholder="输入ID或ClassName">
+  </div>
+
+  <button id="addSelector">添加</button>
+  
+  <div class="elements-list">
+    <h3>要移除的元素:</h3>
+    <div id="elementsList"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html> 
